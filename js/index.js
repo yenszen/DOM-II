@@ -47,7 +47,11 @@ p.forEach(element => {
     });
 })
 
+// interactive fun
 img.forEach(element => {
+    element.addEventListener("dragstart", (event) => {
+        event.target.style.opacity = "0.2";
+    });
     element.addEventListener("dragend", (event) => {
         event.target.style.visibility = "hidden";
     })
@@ -60,14 +64,14 @@ button.forEach(element => {
     })
 })
 
-// prevents nav items from refreshing the page
+// preventDefault()
 navLink.forEach(element => {
     element.addEventListener("click", (event) => {
         event.preventDefault();
     })
 })
 
-// stop propagation
+// stopPropagation()
 header.addEventListener("dblclick", (event) => {
     event.stopPropagation();
 })
